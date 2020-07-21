@@ -127,12 +127,17 @@
 	justify-content: center;
 	border: 0;
 	cursor: pointer;
+	outline: none !important;
 }
 .btn_clear .btn__label {
 	opacity: 0.5;
 }
-.btn_primary {
+.btn_primary,
+.btn_primary:hover[disabled] {
 	background: #4285F4;
+}
+.btn_primary:hover[disabled] {
+	cursor: default;
 }
 .btn_primary:hover {
 	background: #3874D7;
@@ -143,6 +148,10 @@
 }
 .btn + .btn {
 	margin: 0 0 0 20px;
+}
+.btn[disabled] .btn__label {
+	opacity: 0.5;
+	color: #fafafa;
 }
 
 
